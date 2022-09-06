@@ -14,10 +14,11 @@ aplicación hará el cálculo automático del saldo restante.
 ## Tecnologías
 BBDD → SQLite
 
-<img src="./description/dashboard.png" width="250" />
-<img src="./description/login.png" width="250" />
+## Mockup
+<img src="./description/dashboard.png" width="200" />
+<img src="./description/login.png" width="200" />
 
 # Contribuyentes
-Yonier Zapata → [@](https://github.com/samirZapata)
+Yonier Zapata → [@samirZapata](https://github.com/samirZapata)
 
 Michael González → [@miklegonza](https://github.com/miklegonza)
