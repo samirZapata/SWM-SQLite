@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".especificaciones_ingresos">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="-2dp"
+        app:srcCompat="@drawable/ellipseone" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="-1dp"
+        app:srcCompat="@drawable/ellipsetwo" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="240dp"
+        android:text="$ 1.900.000.00"
+        android:fontFamily="@font/montserrat_boldd"
+        android:textSize="19dp"
+        />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="328dp"
+        android:fontFamily="@font/outfit_regular"
+        android:text="Gestiona tu dinero"
+        android:textAllCaps="false"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="300dp"
+        android:fontFamily="@font/montserrat_semiboldd"
+        android:text="Registra tus gastos mensuales"
+        android:textAllCaps="false"
+        android:textSize="18dp" />
+
+    <Button
+        android:id="@+id/btnGFijos"
+        android:layout_width="149dp"
+        android:layout_height="149dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="200dp"
+        android:backgroundTint="#000"
+        android:drawableTop="@drawable/rent"
+        android:gravity="bottom|left"
+        android:padding="30dp"
+        android:text="Gastos"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btnGVariables"
+        android:layout_width="149dp"
+        android:layout_height="149dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="200dp"
+        android:backgroundTint="#000"
+        android:drawableTop="@drawable/growing_money"
+        android:gravity="bottom|left"
+        android:padding="30dp"
+        android:text="Ingresos"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btnOcio"
+        android:layout_width="149dp"
+        android:layout_height="149dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="42dp"
+        android:backgroundTint="#000"
+        android:drawableTop="@drawable/woocommerce"
+        android:gravity="bottom|left"
+        android:padding="30dp"
+        android:text="Resumen"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btnIExtra"
+        android:layout_width="149dp"
+        android:layout_height="149dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="42dp"
+        android:backgroundTint="#000"
+        android:drawableTop="@drawable/growing_money"
+        android:gravity="bottom|left"
+        android:padding="30dp"
+        android:text="Ingresos \nextra"
+        android:textAllCaps="false" />
+
+</RelativeLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".onboarding"
+    android:padding="20dp"
+    >
+
+    <TextView
+        android:id="@+id/slider_heading"
+        android:layout_width="326dp"
+        android:layout_height="53dp"
+        android:layout_below="@+id/firstSliderimg"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/montserrat_boldd"
+        android:gravity="center"
+        android:text="@string/first_slide_title"
+        android:textColor="#80000000"
+        android:textSize="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.67"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstSliderimg" />
+
+    <TextView
+        android:id="@+id/slider_desc"
+        android:layout_width="179dp"
+        android:layout_height="39dp"
+        android:layout_below="@+id/slider_heading"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="1dp"
+        android:fontFamily="@font/montserrat_semiboldd"
+        android:gravity="center"
+        android:text="@string/first_slide_desc"
+        android:textColor="#75000000"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/slider_heading" />
+
+    <ImageView
+        android:id="@+id/firstSliderimg"
+        android:layout_width="319dp"
+        android:layout_height="339dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+        android:src="@drawable/imgsldone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

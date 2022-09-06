@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login"
+    android:orientation="vertical"
+    android:background="#fff"
+    android:padding="30dp">
+
+    <ImageView
+        android:id="@+id/logoImg"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:src="@drawable/headimg"/>
+
+    <ImageView
+        android:id="@+id/viewLogo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/outfit_mediumm"
+        android:src="@drawable/logo"
+        android:text="Login with"
+        android:textColor="#000000"
+        android:textSize="60sp" />
+
+
+    <TextView
+        android:id="@+id/sloganName"
+        android:layout_width="337dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:fontFamily="@font/montserrat_mediumm"
+        android:text="Ingresa para continuar"
+        android:textColor="#75000000"
+        android:textSize="15sp"
+        android:layout_marginTop="5dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical"
+        >
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtLayoutUser"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:hint="Usuario"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:startIconTint="#575DFB">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtLayoutPass"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:hint="Contraseña"
+            app:passwordToggleEnabled="true"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:startIconTint="#575DFB">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnGetPass"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Olvidaste la contraseña?"
+            android:layout_gravity="right"
+            android:background="#00000000"
+            android:textColor="@color/black"
+            android:elevation="0dp"
+            android:fontFamily="@font/outfit_regular"
+            android:textAllCaps="false"
+            />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="153dp"
+            android:layout_height="70dp"
+            android:text="Log in"
+            android:backgroundTint="#000000"
+            android:textColor="#fff"
+            android:layout_gravity="center"
+            android:fontFamily="@font/montserrat_semiboldd"
+            android:textAllCaps="false"
+            android:textSize="16dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/line"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            />
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No tienes cuenta aun? Registrate"
+            android:layout_gravity="center"
+            android:background="#00000000"
+            android:textColor="@color/black"
+            android:elevation="0dp"
+            android:fontFamily="@font/outfit_semiboldd"
+            android:textSize="15dp"
+            android:padding="10dp"
+            android:textAllCaps="false"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/party_popper"
+            android:layout_gravity="center"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">sp</string>
+    <string name="first_slide_title">Money Work for You</string>
+    <string name="first_slide_desc">Make that your money work for you.</string>
+    <string name="slider" />
+    <string name="second_slide_title">Register your movements</string>
+    <string name="second_slide_desc">Give the control of your money everyday.</string>
+    <string name="third_slide_title">Everything is alredy</string>
+    <string name="third_slide_desc">Start taking the control right now</string>
+</resources>
