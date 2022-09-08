@@ -1,11 +1,12 @@
-package com.usbbog.edu.parkingmusb.sp;
+package com.usbbog.edu.parkingmusb.sp.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
+
+import com.usbbog.edu.parkingmusb.sp.R;
 
 public class singup extends AppCompatActivity {
     Button btnRegistrar, btnIniSesion;

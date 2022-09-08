@@ -1,4 +1,4 @@
-package com.usbbog.edu.parkingmusb.sp;
+package com.usbbog.edu.parkingmusb.sp.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,6 +11,8 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.usbbog.edu.parkingmusb.sp.R;
 
 public class splash_screen extends AppCompatActivity {
 

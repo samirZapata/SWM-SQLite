@@ -1,8 +1,7 @@
-package com.usbbog.edu.parkingmusb.sp;
+package com.usbbog.edu.parkingmusb.sp.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
-import androidx.viewpager2.widget.ViewPager2;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,7 +14,8 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.usbbog.edu.parkingmusb.sp.HelperClasses.SliderAdapter;
+import com.usbbog.edu.parkingmusb.sp.R;
+import com.usbbog.edu.parkingmusb.sp.helperclasses.SliderAdapter;
 
 public class onboarding extends AppCompatActivity {
 

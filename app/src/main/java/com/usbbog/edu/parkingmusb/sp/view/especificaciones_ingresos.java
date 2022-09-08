@@ -1,9 +1,11 @@
-package com.usbbog.edu.parkingmusb.sp;
+package com.usbbog.edu.parkingmusb.sp.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.WindowManager;
+
+import com.usbbog.edu.parkingmusb.sp.R;
 
 public class especificaciones_ingresos extends AppCompatActivity {
 

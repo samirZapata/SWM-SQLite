@@ -1,4 +1,4 @@
-package com.usbbog.edu.parkingmusb.sp;
+package com.usbbog.edu.parkingmusb.sp.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+
+import com.usbbog.edu.parkingmusb.sp.R;
 
 public class dashboard extends AppCompatActivity {
 Button btnIndicar;
