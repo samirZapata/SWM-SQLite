@@ -27,16 +27,15 @@
         app:srcCompat="@drawable/ellipsetwo" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/viewIngresos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="240dp"
-        android:text="$ 1.900.000.00"
         android:fontFamily="@font/montserrat_boldd"
-        android:textSize="19dp"
-        />
+        android:text="$ 1.900.000.00"
+        android:textSize="19dp" />
 
     <TextView
         android:id="@+id/textView2"

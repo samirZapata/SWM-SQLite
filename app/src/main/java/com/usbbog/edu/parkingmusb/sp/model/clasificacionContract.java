@@ -5,17 +5,17 @@ import android.provider.BaseColumns;
 
 //ESQUEMA DE LA TB ROLES
 // BaseColumns -> AGREGA COLUMNAS EXTRAS EN CASO DE NECESITARLAS (FACILITA EL MANTENIMIENTO DE LA DB)
-public class rolesContract{
+public class clasificacionContract {
 
     //SAVE DB's TABLE COLUMNS
-    public static abstract class rolesEntry implements BaseColumns{
+    public static abstract class clasificacionEntry implements BaseColumns{
 
-        private static final String DATABASE_TABLE = "clasificacion";
 
-        private static final int ID = Integer.parseInt("id");
-        private static final String TIPO = "tipo";
-        private static final String PERIODO = "periodo";
-        private static final String VALOR = "periodo";
+
+        public static final String ID = "id";
+        public static final String TIPO = "tipo";
+        public static final String PERIODO = "periodo";
+        public static final String VALOR = "valor";
     }
 
 }

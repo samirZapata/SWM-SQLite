@@ -1,14 +1,16 @@
 package com.usbbog.edu.parkingmusb.sp.model;
 
-public class roles {
+public class clasificacion {
     private int id;
-    private Object rol;
-    private Object descripcion;
+    private String tipo;
+    private String periodo;
+    private String valor;
 
-    public roles(int id, Object rol, Object descripcion) {
+    public clasificacion(int id, String tipo, String periodo, String valor) {
         this.id = id;
-        this.rol = rol;
-        this.descripcion = descripcion;
+        this.tipo = tipo;
+        this.periodo = periodo;
+        this.valor = valor;
     }
 
     public int getId() {
@@ -19,19 +21,37 @@ public class roles {
         this.id = id;
     }
 
-    public Object getRol() {
-        return rol;
+    public String getTipo() {
+        return tipo;
     }
 
-    public void setRol(Object rol) {
-        this.rol = rol;
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 
-    public Object getDescripcion() {
-        return descripcion;
+    public String getPeriodo() {
+        return periodo;
     }
 
-    public void setDescripcion(Object descripcion) {
-        this.descripcion = descripcion;
+    public void setPeriodo(String periodo) {
+        this.periodo = periodo;
+    }
+
+    public String getValor() {
+        return valor;
+    }
+
+    public void setValor(String valor) {
+        this.valor = valor;
+    }
+
+    @Override
+    public String toString() {
+        return "clasificacion{" +
+                "id=" + id +
+                ", tipo='" + tipo + '\'' +
+                ", periodo='" + periodo + '\'' +
+                ", valor='" + valor + '\'' +
+                '}';
     }
 }
