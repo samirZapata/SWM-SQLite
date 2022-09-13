@@ -16,6 +16,7 @@
 /build
 /captures
 .cxx
+.idea/
 
 # Built application files
 *.apk
