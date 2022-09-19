@@ -14,24 +14,24 @@ import co.edu.usbbog.swm.model.ClasificacionContract;
 
 import java.util.ArrayList;
 
-public class SwmHelper {
+public class DatabaseHelper {
 
-    private static final String DATABASE_NAME = "swm.db";
+    private static final String DATABASE_NAME = "swm.sqlite";
     private static final int DATABASE_VERSION = 1;
-    private static final String DATABASE_TABLE = "clasificacion";
+    private static final String DATABASE_TABLE = "CLAF";
 
     private DBHelper helper;
     private Context context;
     SQLiteDatabase DATABASE;
     Cursor c;
 
-    public SwmHelper(Context context){
+    public DatabaseHelper(Context context){
         super();
         this.context = context;
     }
 
     //TO OPEN DB
-    public SwmHelper open() throws SQLException {
+    public DatabaseHelper open() throws SQLException {
         this.helper = new DBHelper(context);
         this.DATABASE = this.helper.getWritableDatabase();
         return this;
@@ -87,26 +87,27 @@ public class SwmHelper {
         public DBHelper(@Nullable Context context) {
             super(context, DATABASE_NAME, null, DATABASE_VERSION);
         }
-
+        private static final String sql1 = "CREATE TABLE CLAF (id INTEGER PRIMARY KEY AUTOINCREMENT,"+ "tipo TEXT NOT NULL,"+ "periodo TEXT NOT NULL," +"valor TEXT NOT NULL);";
         //AUTOMATICALLY CALLED ON CREATION HELPER's INSTANCE
         @Override
         public void onCreate(SQLiteDatabase DB) {
 
+
             /*String sql = "CREATE TABLE IF NOT EXISTS "
                     + DATABASE_TABLE + "("
-                    + ClasificacionContract.clasificacionEntry.ID     + "INT PRIMARY KEY NOT NULL," //BECAUSE THE ANDROID's FRAMEWORK USES THIS REFERENCE IN OTHERS PROCCESS
-                    + ClasificacionContract.clasificacionEntry.TIPO    + "VARCHAR NOT NULL,"
-                    + ClasificacionContract.clasificacionEntry.PERIODO + "VARCHAR NOT NULL,"
-                    + ClasificacionContract.clasificacionEntry.VALOR   + "VARCHAR NOT NULL);";
-            DB.execSQL(sql);*/
+                    + ClasificacionContract.clasificacionEntry.ID     + " INT PRIMARY KEY NOT NULL," //BECAUSE THE ANDROID's FRAMEWORK USES THIS REFERENCE IN OTHERS PROCCESS
+                    + ClasificacionContract.clasificacionEntry.TIPO    + " VARCHAR NOT NULL,"
+                    + ClasificacionContract.clasificacionEntry.PERIODO + " VARCHAR NOT NULL,"
+                    + ClasificacionContract.clasificacionEntry.VALOR   + " VARCHAR NOT NULL);";*/
 
 
+            DB.execSQL(sql1);
         }
 
         //SI LA BD LLEGA A TENER UNA VERSION MAYOR INVOCAMOS ESTE METODO
         @Override
         public void onUpgrade(SQLiteDatabase DB, int oldVersion, int newVersion) {
-            DB.execSQL("DROP TABLE IF EXISTS " + DATABASE_TABLE);
+            DB.execSQL("DROP TABLE " + DATABASE_TABLE);
             onCreate(DB);
         }
     }

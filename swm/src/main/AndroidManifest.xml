@@ -14,22 +14,25 @@
         android:theme="@style/Theme.Sp"
         tools:targetApi="31">
         <activity
-            android:name="co.edu.usbbog.swm.view.especificaciones_ingresos"
+            android:name=".view.ShowMExpenses"
             android:exported="false" />
         <activity
-            android:name="co.edu.usbbog.swm.view.Dashboard"
+            android:name=".view.especificaciones_ingresos"
             android:exported="false" />
         <activity
-            android:name="co.edu.usbbog.swm.view.singup"
+            android:name=".view.Dashboard"
             android:exported="false" />
         <activity
-            android:name="co.edu.usbbog.swm.view.login"
+            android:name=".view.singup"
             android:exported="false" />
         <activity
-            android:name="co.edu.usbbog.swm.view.onboarding"
+            android:name=".view.login"
             android:exported="false" />
         <activity
-            android:name="co.edu.usbbog.swm.view.splash_screen"
+            android:name=".view.onboarding"
+            android:exported="false" />
+        <activity
+            android:name=".view.splash_screen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
