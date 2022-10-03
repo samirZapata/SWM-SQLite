@@ -7,9 +7,9 @@ public class IngresosContract {
     public static abstract class incomeEntry implements BaseColumns {
 
         public static final String ID = "id";
-        public static final String INGRESO = "ingreso";
+        //public static final String INGRESO = "ingreso";
         public static final String VALOR = "valor";
-        public static final String USUARIO = "usuario";
+        //public static final String USUARIO = "usuario";
 
     }
 }

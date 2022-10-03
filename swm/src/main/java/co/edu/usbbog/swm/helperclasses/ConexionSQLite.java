@@ -13,7 +13,7 @@ public class ConexionSQLite extends SQLiteOpenHelper {
     //USER'S TABLE
     private final String tblUsers = "CREATE TABLE users(id INTGER PRIMARY KEY AUTOINCREMENT, nombre TEXT, telefono TEXT, email TEXT, usuario TEXT, clave TEXT, rol INTEGER)";
     //INCOME TABLE
-    private final String tblIncome = "CREATE TABLE income(id INTEGER PRIMARY KEY AUTOINCREMENT, ingreso TEXT, valor DOUBLE)";
+    private final String tblIncome = "CREATE TABLE income(id INTEGER PRIMARY KEY AUTOINCREMENT, valor DOUBLE)";
 
     public ConexionSQLite(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);

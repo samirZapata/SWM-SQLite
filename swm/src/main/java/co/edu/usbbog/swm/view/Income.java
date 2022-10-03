@@ -2,6 +2,7 @@ package co.edu.usbbog.swm.view;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -33,8 +34,7 @@ public class Income extends AppCompatActivity {
         btnIndicar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String incomeValue = edtIncome.getText().toString();
-                income(incomeValue);
+                income();
 
                 Intent i = new Intent(Income.this, especificaciones_ingresos.class);
                 i.putExtra("value", obj.queryIncome(Income.this, dto));
@@ -43,9 +43,10 @@ public class Income extends AppCompatActivity {
         });
     }
 
-    private void income(String value) {
-
-        dto.setIngresos(value);
+    private void income() {
+        String incomeValue = edtIncome.getText().toString();
+        Log.i("txt", incomeValue.toString());
+        dto.setValor(Double.parseDouble(incomeValue));
         int resInsert = obj.insertIncome(this, dto);
         if (resInsert == 1) {
             Toast.makeText(this, "OK :)", Toast.LENGTH_SHORT).show();
