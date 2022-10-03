@@ -8,6 +8,12 @@
     android:background="#E3FAFAFA">
 
 
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="331dp"
+        android:layout_height="176dp"
+        android:layout_gravity="right"
+        app:srcCompat="@drawable/sheetimg" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/txtLayoutFijos"
@@ -101,5 +107,7 @@
         android:textAllCaps="false"
         android:textColor="#fff"
         android:textSize="16dp" />
+
+
 
 </LinearLayout>

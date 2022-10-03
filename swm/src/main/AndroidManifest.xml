@@ -20,7 +20,7 @@
             android:name=".view.especificaciones_ingresos"
             android:exported="false" />
         <activity
-            android:name=".view.Dashboard"
+            android:name=".view.Income"
             android:exported="false" />
         <activity
             android:name=".view.singup"

@@ -24,7 +24,7 @@ public class login extends AppCompatActivity {
 
 
         btnLogin.setOnClickListener(view -> {
-            Intent i = new Intent(login.this, Dashboard.class);
+            Intent i = new Intent(login.this, Income.class);
             CharSequence text = "Bienvenido";
             Toast toast =  Toast.makeText(getApplicationContext(), text, Toast.LENGTH_SHORT);
             toast.show();

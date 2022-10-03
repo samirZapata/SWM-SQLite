@@ -1,15 +1,11 @@
 package co.edu.usbbog.swm.view;
 
-import android.content.ContentValues;
+import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,15 +13,16 @@ import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.textfield.TextInputLayout;
 
 import co.edu.usbbog.swm.R;
-import co.edu.usbbog.swm.helperclasses.HelperDB;
+import co.edu.usbbog.swm.helperclasses.BottomSheetAdapter;
 
 public class especificaciones_ingresos extends AppCompatActivity {
 
     TextView viewIngresos;
-    Button btnGfijos;
+    Button btnGfijos, btnGVariables;
     BottomSheetDialog gastosFijosDialog;
     TextInputLayout txtLayoutPeriodo, txtLayoutValor;
-    EditText edtGFijo, edtPeriodo, edtValor;
+
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,60 +31,19 @@ public class especificaciones_ingresos extends AppCompatActivity {
 
         viewIngresos = findViewById(R.id.viewIngresos);
         btnGfijos = findViewById(R.id.btnGFijos);
+        btnGVariables = findViewById(R.id.btnGVariables);
 
-         edtGFijo = findViewById(R.id.edtGFijo);
-         edtPeriodo = findViewById(R.id.edtPeriodo);
-         edtValor = findViewById(R.id.edtValor);
+        txtLayoutPeriodo = findViewById(R.id.txtLayoutPeriodo);
+        txtLayoutValor = findViewById(R.id.txtLayoutValor);
 
-         txtLayoutPeriodo = findViewById(R.id.txtLayoutPeriodo);
-         txtLayoutValor = findViewById(R.id.txtLayoutValor);
-
-        gastosFijosDialog = new BottomSheetDialog(this);
-        //INFLATE VIEW
-        onCreateDialog();
-
-        btnGfijos.setOnClickListener((View v) -> {
-            gastosFijosDialog.show();
-        });
-
-        gastosFijosDialog.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
-
+        //SHOW INCOME
+        reciveIncome();
+        //INFLATE BottomSheetDialog
+        btnGfijos.setOnClickListener(v -> new BottomSheetAdapter().show(getSupportFragmentManager(), "Show"));
+        //END INFLATE VIEW BottomSheetDialog
     }
 
-
-    private void onCreateDialog(){
-        View view = getLayoutInflater().inflate(R.layout.bottom_sheet, null, false);
-        Button btnInsert = view.findViewById(R.id.btnIndicarGasto);
-        TextInputLayout layout = view.findViewById(R.id.txtLayoutFijos);
-        //EditText edtGFijo = view.findViewById(R.id.edtGFijo);
-
-        btnInsert.setOnClickListener((View view1)->{
-            gastosFijosDialog.dismiss();
-            //Toast.makeText(especificaciones_ingresos.this, edtGFijo.getText().toString(), Toast.LENGTH_SHORT);
-            register();
-            Intent i = new Intent(especificaciones_ingresos.this, ShowMExpenses.class);
-            startActivity(i);
-        });
-
-        gastosFijosDialog.setContentView(view);
-
-    }
-
-
-    /*private void showData(){
-        DatabaseHelper cData = new DatabaseHelper(this);
-        cData.open();
-        ArrayList<Clasificacion> list = cData.getClasificacion();
-        cData.close();
-        for(Clasificacion c: list){
-            Log.i("CLAS", String.valueOf(c.getId()));
-            Log.i("CLAS", c.getTipo());
-            Log.i("CLAS", c.getPeriodo());
-            Log.i("CLAS", c.getValor());
-            
-        }
-    }*/
-
+    /*
     public void register(){
         HelperDB dbHelper = new HelperDB(this, "swm", null, 1);
         //OPEN DB IN WRITE N' READ MODE
@@ -174,6 +130,14 @@ public class especificaciones_ingresos extends AppCompatActivity {
             txtLayoutValor.setError("Llenar todos los campos");
         }
 
+    }*/
+
+    private void reciveIncome(){
+        Intent intent = getIntent();
+        if (intent.getExtras() != null) {
+            String item = intent.getStringExtra("value");
+            viewIngresos.setText(item);
+        }
     }
 
 }

@@ -13,6 +13,8 @@ public class Clasificacion {
         this.valor = valor;
     }
 
+
+
     public int getId() {
         return id;
     }
@@ -53,5 +55,9 @@ public class Clasificacion {
                 ", periodo='" + periodo + '\'' +
                 ", valor='" + valor + '\'' +
                 '}';
+    }
+
+    public Clasificacion() {
+
     }
 }

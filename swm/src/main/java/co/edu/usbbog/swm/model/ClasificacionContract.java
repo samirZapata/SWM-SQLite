@@ -10,12 +10,11 @@ public class ClasificacionContract {
     //SAVE DB's TABLE COLUMNS
     public static abstract class clasificacionEntry implements BaseColumns{
 
-
-
         public static final String ID = "id";
         public static final String TIPO = "tipo";
         public static final String PERIODO = "periodo";
         public static final String VALOR = "valor";
+
     }
 
 }
