@@ -13,7 +13,7 @@ public class UsuariosContract {
         public static final String EMAIL = "email";
         public static final String USUARIO = "usuario";
         public static final String CLAVE = "clave";
-        public static final String ROL = "rol";
+        //public static final String ROL = "rol";
 
     }
 

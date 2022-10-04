@@ -76,7 +76,6 @@ public class Usuarios {
                 ", email='" + email + '\'' +
                 ", usuario='" + usuario + '\'' +
                 ", clave='" + clave + '\'' +
-                ", rol=" + rol +
                 '}';
     }
 

@@ -10,8 +10,10 @@ public class ConexionSQLite extends SQLiteOpenHelper {
 
     //CLASIFICATION'S TABLE
     private final String tableClasificacion = "CREATE TABLE clasification(id INTEGER PRIMARY KEY AUTOINCREMENT, tipo TEXT, periodo TEXT, valor DOUBLE)";
+
     //USER'S TABLE
-    private final String tblUsers = "CREATE TABLE users(id INTGER PRIMARY KEY AUTOINCREMENT, nombre TEXT, telefono TEXT, email TEXT, usuario TEXT, clave TEXT, rol INTEGER)";
+    private final String tblUsers = "CREATE TABLE users(id INTEGER PRIMARY KEY AUTOINCREMENT, nombre TEXT, telefono TEXT, email TEXT, usuario TEXT, clave TEXT)";
+
     //INCOME TABLE
     private final String tblIncome = "CREATE TABLE income(id INTEGER PRIMARY KEY AUTOINCREMENT, valor DOUBLE)";
 
@@ -22,13 +24,14 @@ public class ConexionSQLite extends SQLiteOpenHelper {
     //ALL I WANT TO CREATE WHEN WE INVOKE THIS CLASS
     @Override
     public void onCreate(SQLiteDatabase db) {
-        //CREATE FIRST TABLE
-        db.execSQL(tableClasificacion);
-        //CREATE SECOND TABLE
-        db.execSQL(tblIncome);
-        //CREATE THIRD TABLE
-        //db.execSQL(tblUsers);
-
+        if (db.isOpen()) {
+            //CREATE FIRST TABLE
+            db.execSQL(tableClasificacion);
+            //CREATE SECOND TABLE
+            db.execSQL(tblIncome);
+            //CREATE THIRD TABLE
+            db.execSQL(tblUsers);
+        }
     }
 
     //WHEN WE MAKE CHANGES IN SOME TABLE

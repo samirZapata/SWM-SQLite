@@ -14,9 +14,10 @@ public class Model {
 
     //TO GET THE DB CONECTION
     public SQLiteDatabase getConn(Context context) {
-        ConexionSQLite conn = new ConexionSQLite(context, "swmdb", null, 1);
+        ConexionSQLite conn = new ConexionSQLite(context, "swmdb", null, 2);
         //RETURN WRITABLE OBJECT
         SQLiteDatabase db = conn.getWritableDatabase();
+        SQLiteDatabase rw = conn.getReadableDatabase();
         return db;
     }
 
@@ -112,7 +113,7 @@ public class Model {
             int iVALOR = c.getColumnIndex(IngresosContract.incomeEntry.VALOR);
             for (c.moveToFirst(); !c.isAfterLast(); c.moveToNext()) {
                 salida += c.getString(iVALOR);
-                        //+ " valor: " + c.getString(iVALOR) + '\n';
+                //+ " valor: " + c.getString(iVALOR) + '\n';
                 Log.i("SALIDA", salida.toString());
             }
             c.close();
@@ -122,5 +123,50 @@ public class Model {
         }
         return salida;
     }
+
+    /*-----------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                      AUTHENTICATION SECTION
+    * -----------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+    //REGISTER INSERT METHOD
+    public int registerUser(Context context, Usuarios dto) {
+        //WHEN RES IS EQUAL TO 0 ISN'T AN INSERT, BUT WHEN IS 1 THIS BECOME AN INSERT
+        String sql = "INSERT INTO users (nombre, telefono, email, usuario, clave) VALUES ('" + dto.getNombre() + "', '" + dto.getTelefono() + "', '" + dto.getEmail() + "', '" + dto.getUsuario() + "', '" + dto.getClave() + "')";
+        SQLiteDatabase db = this.getConn(context);
+        try {
+            db.execSQL(sql);
+            Log.i("YES", "The insertion was correct");
+        } catch (SQLException e) {
+            Log.i("Insert", e.getMessage() + "");
+            return 0;
+        }
+        return 1;
+    }
+
+    public Cursor login(Context context, String user, String pass) {
+        //WHEN RES IS EQUAL TO 0 ISN'T AN INSERT, BUT WHEN IS 1 THIS BECOME AN INSERT
+        String sql = "SELECT usuario, clave FROM users WHERE usuario = '" + user + "' AND clave = '" + pass + "' ";
+        SQLiteDatabase rw = this.getConn(context);
+        String salida = "";
+        Cursor c = null;
+        try {
+            c = rw.rawQuery(sql, null);
+
+            int iUSUARIO = c.getColumnIndex(UsuariosContract.usersEntry.USUARIO);
+            int iCLAVE = c.getColumnIndex(UsuariosContract.usersEntry.CLAVE);
+
+            for (c.moveToFirst(); !c.isAfterLast(); c.moveToNext()) {
+                salida += c.getString(iUSUARIO) +
+                        c.getString(iCLAVE);
+                Log.i("SALIDA", salida.toString());
+            }
+            c.close();
+
+        } catch (SQLException e) {
+            Log.i("SELECT", e.getMessage() + "");
+        }
+        return c;
+    }
+
 
 }
